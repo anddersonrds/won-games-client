@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import 'match-media-mock';
 import { render, screen } from '@testing-library/react';
 

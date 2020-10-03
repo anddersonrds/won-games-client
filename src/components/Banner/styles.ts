@@ -9,6 +9,7 @@ export const Wrapper = styled.main`
   ${media.lessThan('large')`
     ${RibbonStyles.Wrapper} {
       right: 0;
+
       &::before {
         display: none;
       }
@@ -41,7 +42,6 @@ export const Image = styled.div<ImageProps>`
 
 export const Caption = styled.div`
   ${({ theme }) => css`
-    width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     padding: ${theme.spacings.small};
 
@@ -51,6 +51,7 @@ export const Caption = styled.div`
       position: absolute;
       bottom: 0;
       left: 0;
+      right: 0;
     `}
   `}
 `;
