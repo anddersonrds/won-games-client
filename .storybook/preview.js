@@ -1,18 +1,18 @@
-import { ThemeProvider } from 'styled-components';
-import GlobalStyles from 'styles/global';
-import theme from 'styles/theme';
+import { ThemeProvider } from 'styled-components'
+import GlobalStyles from 'styles/global'
+import theme from 'styles/theme'
 
 export const parameters = {
-  background: {
+  backgrounds: {
     default: 'won-light',
     values: [
       {
         name: 'won-light',
-        valuer: theme.colors.white
+        value: theme.colors.white
       },
       {
         name: 'won-dark',
-        valuer: theme.colors.mainMg
+        value: theme.colors.mainBg
       }
     ]
   }
@@ -24,8 +24,5 @@ export const decorators = [
       <GlobalStyles removeBg />
       <Story />
     </ThemeProvider>
-  ),
+  )
 ]
-
-
-
