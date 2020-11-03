@@ -54,6 +54,7 @@ const GameCardSlider = ({ items, color = 'white' }: GameCardSliderProps) => (
   <S.Wrapper color={color}>
     <Slider settings={settings}>
       {items.map((item, index) => (
+        // eslint-disable-next-line react/no-array-index-key
         <GameCard key={index} {...item} />
       ))}
     </Slider>
