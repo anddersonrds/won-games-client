@@ -1,11 +1,12 @@
 import styled, { css, DefaultTheme } from 'styled-components';
 import media from 'styled-media-query';
 
-import { HeadingProps, LineColors } from '.';
+import { HeadingProps, LineColors } from './index';
 
 const wrapperModifiers = {
   small: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.medium};
+
     &::after {
       width: 3rem;
     }
@@ -13,9 +14,14 @@ const wrapperModifiers = {
 
   medium: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.xlarge};
+
     ${media.greaterThan('medium')`
       font-size: ${theme.font.sizes.xxlarge};
     `}
+  `,
+
+  huge: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.huge};
   `,
 
   lineLeft: (theme: DefaultTheme, lineColor: LineColors) => css`
@@ -26,12 +32,13 @@ const wrapperModifiers = {
   lineBottom: (theme: DefaultTheme, lineColor: LineColors) => css`
     position: relative;
     margin-bottom: ${theme.spacings.medium};
+
     &::after {
+      content: '';
       position: absolute;
+      width: 5rem;
       left: 0;
       bottom: -0.5rem;
-      content: '';
-      width: 5rem;
       border-bottom: 0.5rem solid ${theme.colors[lineColor]};
     }
   `,
