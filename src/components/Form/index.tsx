@@ -4,7 +4,7 @@ import { darken } from 'polished';
 import * as TextFieldStyles from 'components/TextField/styles';
 import * as ButtonStyles from 'components/Button/styles';
 
-export const Wrapper = styled.div`
+export const FormWrapper = styled.div`
   ${({ theme }) => css`
     ${TextFieldStyles.Wrapper} {
       margin: ${theme.spacings.xxsmall} 0;
@@ -23,8 +23,8 @@ export const FormLink = styled.div`
     color: ${theme.colors.black};
 
     a {
-      text-decoration: none;
       color: ${theme.colors.secondary};
+      text-decoration: none;
       border-bottom: 0.1rem solid ${theme.colors.secondary};
       transition: color, border, ${theme.transition.fast};
 
