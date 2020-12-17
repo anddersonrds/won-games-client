@@ -1,3 +1,7 @@
-export default function Index() {
-  return <h1>Cyberbug 2077</h1>;
-}
+import Game from 'templates/Game';
+
+const Index = () => {
+  return <Game />;
+};
+
+export default Index;
