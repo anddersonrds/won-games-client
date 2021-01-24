@@ -11,6 +11,7 @@ type Rating = 'BR0' | 'BR10' | 'BR12' | 'BR14' | 'BR16' | 'BR18';
 
 export type GameDetailsProps = {
   developer: string;
+  publisher: string;
   platforms: Platform[];
   releaseDate: string;
   rating: Rating;
@@ -19,15 +20,16 @@ export type GameDetailsProps = {
 
 const GameDetails = ({
   developer,
+  publisher,
   releaseDate,
   platforms,
   rating,
-  genres,
+  genres
 }: GameDetailsProps) => {
   const platformIcons = {
     linux: <Linux title="Linux" size={18} />,
     mac: <Apple title="Mac" size={18} />,
-    windows: <Windows title="Windows" size={18} />,
+    windows: <Windows title="Windows" size={18} />
   };
 
   return (
@@ -50,7 +52,7 @@ const GameDetails = ({
             {new Intl.DateTimeFormat('en-US', {
               day: 'numeric',
               month: 'short',
-              year: 'numeric',
+              year: 'numeric'
             }).format(new Date(releaseDate))}
           </S.Description>
         </S.Block>
@@ -66,7 +68,7 @@ const GameDetails = ({
 
         <S.Block>
           <S.Label>Publisher</S.Label>
-          <S.Description>2K</S.Description>
+          <S.Description>{publisher}</S.Description>
         </S.Block>
 
         <S.Block>

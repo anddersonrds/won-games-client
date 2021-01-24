@@ -5,10 +5,11 @@ import GameDetails, { GameDetailsProps } from './index';
 
 const props: GameDetailsProps = {
   developer: 'Different Tales',
+  publisher: '2K',
   platforms: ['windows', 'mac', 'linux'],
   releaseDate: '2020-11-21T23:00:00',
   rating: 'BR0',
-  genres: ['Role-playing', 'Narrative'],
+  genres: ['Role-playing', 'Narrative']
 };
 
 describe('<GameDetails />', () => {
@@ -16,27 +17,27 @@ describe('<GameDetails />', () => {
     renderWithTheme(<GameDetails {...props} />);
 
     expect(
-      screen.getByRole('heading', { name: /developer/i }),
+      screen.getByRole('heading', { name: /developer/i })
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole('heading', { name: /release date/i }),
+      screen.getByRole('heading', { name: /release date/i })
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole('heading', { name: /platforms/i }),
+      screen.getByRole('heading', { name: /platforms/i })
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole('heading', { name: /publisher/i }),
+      screen.getByRole('heading', { name: /publisher/i })
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole('heading', { name: /rating/i }),
+      screen.getByRole('heading', { name: /rating/i })
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole('heading', { name: /genres/i }),
+      screen.getByRole('heading', { name: /genres/i })
     ).toBeInTheDocument();
   });
 
@@ -58,6 +59,18 @@ describe('<GameDetails />', () => {
     renderWithTheme(<GameDetails {...props} rating="BR18" />);
 
     expect(screen.getByText(/18\+/i)).toBeInTheDocument();
+  });
+
+  it('should render the publisher', () => {
+    renderWithTheme(<GameDetails {...props} rating="BR18" />);
+
+    expect(screen.getByText(/2K/i)).toBeInTheDocument();
+  });
+
+  it('should render the developer', () => {
+    renderWithTheme(<GameDetails {...props} rating="BR18" />);
+
+    expect(screen.getByText(/Different Tales/i)).toBeInTheDocument();
   });
 
   it('should render the formated date', () => {
