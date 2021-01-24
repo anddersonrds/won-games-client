@@ -17,7 +17,7 @@ const props = {
   upcommingHighlight: highlightMock,
   upcommingMoreGames: gamesMock,
   freeGames: gamesMock,
-  freeHighlight: highlightMock,
+  freeHighlight: highlightMock
 };
 
 jest.mock('components/Showcase', () => {
@@ -25,7 +25,7 @@ jest.mock('components/Showcase', () => {
     __esModule: true,
     default: function Mock() {
       return <div data-testid="Mock Showcase" />;
-    },
+    }
   };
 });
 
@@ -34,7 +34,7 @@ jest.mock('components/BannerSlider', () => {
     __esModule: true,
     default: function Mock() {
       return <div data-testid="Mock Banner Slider" />;
-    },
+    }
   };
 });
 

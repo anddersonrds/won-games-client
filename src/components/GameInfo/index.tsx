@@ -1,6 +1,6 @@
 import {
   AddShoppingCart,
-  FavoriteBorder,
+  FavoriteBorder
 } from '@styled-icons/material-outlined';
 
 import Button from 'components/Button';

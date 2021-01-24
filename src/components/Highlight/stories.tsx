@@ -6,7 +6,7 @@ import item from './mock';
 export default {
   title: 'Highlight',
   component: Highlight,
-  args: { ...item },
+  args: { ...item }
 } as Meta;
 
 export const Default: Story<HighlightProps> = args => (
@@ -22,5 +22,5 @@ export const WithFloatImage: Story<HighlightProps> = args => (
 );
 
 WithFloatImage.args = {
-  floatImage: '/img/red-dead-float.png',
+  floatImage: '/img/red-dead-float.png'
 };

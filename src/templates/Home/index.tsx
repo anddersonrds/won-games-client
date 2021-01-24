@@ -30,7 +30,7 @@ const Home = ({
   upcommingHighlight,
   upcommingMoreGames,
   freeGames,
-  freeHighlight,
+  freeHighlight
 }: HomeTemplateProps) => (
   <Base>
     <Container>

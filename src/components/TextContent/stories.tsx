@@ -9,9 +9,9 @@ export default {
   args: textMock,
   parameters: {
     backgrounds: {
-      default: 'won-dark',
-    },
-  },
+      default: 'won-dark'
+    }
+  }
 } as Meta;
 
 export const Default: Story<TextContentProps> = args => (

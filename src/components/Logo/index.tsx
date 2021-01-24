@@ -11,7 +11,7 @@ const Logo = ({
   id = 'logo',
   color = 'white',
   size = 'normal',
-  hideOnMobile = false,
+  hideOnMobile = false
 }: LogoProps) => (
   <S.Wrapper color={color} size={size} hideOnMobile={hideOnMobile}>
     <svg

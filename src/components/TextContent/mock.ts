@@ -39,5 +39,5 @@ export default {
   amet consectetur adipisicing elit. Quia praesentium cupiditate tenetur
   quam illum. Fugiat consectetur assumenda in, vitae nemo, eaque quia
   numquam ad perspiciatis doloribus error eveniet quo officia?
-</p>`,
+</p>`
 };

@@ -3,7 +3,7 @@ import FormSignIn from './index';
 
 export default {
   title: 'Form/FormSignIn',
-  component: FormSignIn,
+  component: FormSignIn
 } as Meta;
 
 export const Default: Story = () => (

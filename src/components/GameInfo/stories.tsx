@@ -8,10 +8,10 @@ export default {
   component: GameInfo,
   parameters: {
     backgrounds: {
-      default: 'won-dark',
-    },
+      default: 'won-dark'
+    }
   },
-  args: mockGame,
+  args: mockGame
 } as Meta;
 
 export const Default: Story<GameInfoProps> = args => (

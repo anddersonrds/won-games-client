@@ -13,7 +13,7 @@ const commonSettings: SliderSettings = {
   lazyLoad: 'ondemand',
   arrows: true,
   nextArrow: <ArrowRight aria-label="next image" />,
-  prevArrow: <ArrowLeft aria-label="previous image" />,
+  prevArrow: <ArrowLeft aria-label="previous image" />
 };
 
 const settings: SliderSettings = {
@@ -25,31 +25,31 @@ const settings: SliderSettings = {
       settings: {
         arrows: false,
         slidesToShow: 3.2,
-        draggable: true,
-      },
+        draggable: true
+      }
     },
     {
       breakpoint: 1024,
       settings: {
         arrows: false,
         slidesToShow: 2.2,
-        draggable: true,
-      },
+        draggable: true
+      }
     },
     {
       breakpoint: 768,
       settings: {
         arrows: false,
         slidesToShow: 2.2,
-        draggable: true,
-      },
-    },
-  ],
+        draggable: true
+      }
+    }
+  ]
 };
 
 const modalSettings: SliderSettings = {
   ...commonSettings,
-  slidesToShow: 1,
+  slidesToShow: 1
 };
 
 export type GalleryImageProps = {

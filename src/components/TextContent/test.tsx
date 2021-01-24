@@ -5,7 +5,7 @@ import TextContent from './index';
 
 const props = {
   title: 'Description',
-  content: `<h1>Content</h1>`,
+  content: `<h1>Content</h1>`
 };
 
 describe('<TextContent />', () => {
@@ -13,11 +13,11 @@ describe('<TextContent />', () => {
     renderWithTheme(<TextContent {...props} />);
 
     expect(
-      screen.getByRole('heading', { name: /description/i }),
+      screen.getByRole('heading', { name: /description/i })
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole('heading', { name: /content/i }),
+      screen.getByRole('heading', { name: /content/i })
     ).toBeInTheDocument();
   });
 
@@ -25,7 +25,7 @@ describe('<TextContent />', () => {
     renderWithTheme(<TextContent content={props.content} />);
 
     expect(
-      screen.queryByRole('heading', { name: /description/i }),
+      screen.queryByRole('heading', { name: /description/i })
     ).not.toBeInTheDocument();
   });
 
@@ -36,11 +36,11 @@ describe('<TextContent />', () => {
       .parentElement;
 
     expect(wrapper).toHaveStyle({
-      color: '#FAFAFA', // theme.colors.white
+      color: '#FAFAFA' // theme.colors.white
     });
 
     expect(wrapper).toHaveStyleRule('color', '#030517', {
-      media: '(min-width: 768px)',
+      media: '(min-width: 768px)'
     });
   });
 });

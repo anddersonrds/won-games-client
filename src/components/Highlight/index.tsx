@@ -18,7 +18,7 @@ const Highlight = ({
   floatImage,
   buttonLabel,
   buttonLink,
-  alignment = 'right',
+  alignment = 'right'
 }: HighlightProps) => (
   <S.Wrapper alignment={alignment} backgroundImage={backgroundImage}>
     {!!floatImage && <S.FloatImage src={floatImage} alt={title} />}

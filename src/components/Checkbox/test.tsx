@@ -8,7 +8,7 @@ import Checkbox from './index';
 describe('<Checkbox />', () => {
   it('should render with label', () => {
     const { container } = renderWithTheme(
-      <Checkbox label="checkbox label" labelFor="check" />,
+      <Checkbox label="checkbox label" labelFor="check" />
     );
 
     // input a partir do papel / role
@@ -31,11 +31,11 @@ describe('<Checkbox />', () => {
 
   it('should render with black label', () => {
     renderWithTheme(
-      <Checkbox label="checkbox label" labelFor="check" labelColor="black" />,
+      <Checkbox label="checkbox label" labelFor="check" labelColor="black" />
     );
 
     expect(screen.getByText(/checkbox label/i)).toHaveStyle({
-      color: theme.colors.black,
+      color: theme.colors.black
     });
   });
 

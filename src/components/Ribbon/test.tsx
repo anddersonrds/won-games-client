@@ -15,7 +15,7 @@ describe('<Ribbon />', () => {
     renderWithTheme(<Ribbon>Best Seller</Ribbon>);
 
     expect(screen.getByText(/Best Seller/i)).toHaveStyle({
-      backgroundColor: '#F231A5',
+      backgroundColor: '#F231A5'
     });
   });
 
@@ -23,7 +23,7 @@ describe('<Ribbon />', () => {
     renderWithTheme(<Ribbon color="secondary">Best Seller</Ribbon>);
 
     expect(screen.getByText(/Best Seller/i)).toHaveStyle({
-      backgroundColor: '#3CD3C1',
+      backgroundColor: '#3CD3C1'
     });
   });
 
@@ -32,7 +32,7 @@ describe('<Ribbon />', () => {
 
     expect(screen.getByText(/Best Seller/i)).toHaveStyle({
       height: '3.6rem',
-      fontSize: '1.4rem',
+      fontSize: '1.4rem'
     });
   });
 
@@ -41,7 +41,7 @@ describe('<Ribbon />', () => {
 
     expect(screen.getByText(/Best Seller/i)).toHaveStyle({
       height: '2.6rem',
-      fontSize: '1.2rem',
+      fontSize: '1.2rem'
     });
   });
 });

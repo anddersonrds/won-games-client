@@ -10,7 +10,7 @@ import Showcase from './index';
 const props = {
   title: 'Most Popular',
   highlight: highlightMock,
-  games: gamesMock.slice(0, 1),
+  games: gamesMock.slice(0, 1)
 };
 
 describe('<Showcase />', () => {
@@ -18,28 +18,28 @@ describe('<Showcase />', () => {
     renderWithTheme(<Showcase {...props} />);
 
     expect(
-      screen.getByRole('heading', { name: /most popular/i }),
+      screen.getByRole('heading', { name: /most popular/i })
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole('heading', { name: highlightMock.title }),
+      screen.getByRole('heading', { name: highlightMock.title })
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole('heading', { name: gamesMock[0].title }),
+      screen.getByRole('heading', { name: gamesMock[0].title })
     ).toBeInTheDocument();
   });
 
   it('should render without title', () => {
     renderWithTheme(
-      <Showcase games={props.games} highlight={props.highlight} />,
+      <Showcase games={props.games} highlight={props.highlight} />
     );
 
     screen.getByRole('heading', { name: highlightMock.title });
     screen.getByRole('heading', { name: gamesMock[0].title });
 
     expect(
-      screen.queryByRole('heading', { name: /most popular/i }),
+      screen.queryByRole('heading', { name: /most popular/i })
     ).not.toBeInTheDocument();
   });
 
@@ -50,20 +50,20 @@ describe('<Showcase />', () => {
     screen.getByRole('heading', { name: gamesMock[0].title });
 
     expect(
-      screen.queryByRole('heading', { name: highlightMock.title }),
+      screen.queryByRole('heading', { name: highlightMock.title })
     ).not.toBeInTheDocument();
   });
 
   it('should render without games', () => {
     renderWithTheme(
-      <Showcase title={props.title} highlight={props.highlight} />,
+      <Showcase title={props.title} highlight={props.highlight} />
     );
 
     screen.getByRole('heading', { name: /most popular/i });
     screen.getByRole('heading', { name: highlightMock.title });
 
     expect(
-      screen.queryByRole('heading', { name: gamesMock[0].title }),
+      screen.queryByRole('heading', { name: gamesMock[0].title })
     ).not.toBeInTheDocument();
   });
 });

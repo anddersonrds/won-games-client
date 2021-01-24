@@ -7,14 +7,14 @@ export default {
   title: 'Gallery',
   component: Gallery,
   args: {
-    items,
+    items
   },
   parameters: {
     layout: 'fullscreen',
     backgrounds: {
-      default: 'won-dark',
-    },
-  },
+      default: 'won-dark'
+    }
+  }
 } as Meta;
 
 export const Default: Story<GalleryProps> = args => (

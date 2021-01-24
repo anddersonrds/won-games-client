@@ -7,12 +7,12 @@ export default {
   parameters: {
     layout: 'fullscreen',
     backgrounds: {
-      default: 'won-dark',
-    },
+      default: 'won-dark'
+    }
   },
   argTypes: {
-    onCheck: { action: 'checked' },
-  },
+    onCheck: { action: 'checked' }
+  }
 } as Meta;
 
 export const Default: Story<CheckboxProps> = args => (

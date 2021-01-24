@@ -1,7 +1,7 @@
 import {
   AddShoppingCart,
   Favorite,
-  FavoriteBorder,
+  FavoriteBorder
 } from '@styled-icons/material-outlined';
 
 import Ribbon, { RibbonColors, RibbonSizes } from 'components/Ribbon';
@@ -31,7 +31,7 @@ const GameCard = ({
   ribbon,
   ribbonColor = 'primary',
   ribbonSize = 'small',
-  onFav,
+  onFav
 }: GameCardProps) => (
   <S.Wrapper>
     {!!ribbon && (

@@ -8,7 +8,7 @@ const props = {
   title: 'Population Zero',
   developer: 'Rockstar Games',
   img: 'https://source.unsplash.com/user/willianjusten/300x140',
-  price: 'R$ 235,00',
+  price: 'R$ 235,00'
 };
 
 describe('<GameCard />', () => {
@@ -16,16 +16,16 @@ describe('<GameCard />', () => {
     const { container } = renderWithTheme(<GameCard {...props} />);
 
     expect(
-      screen.getByRole('heading', { name: props.title }),
+      screen.getByRole('heading', { name: props.title })
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole('heading', { name: props.developer }),
+      screen.getByRole('heading', { name: props.developer })
     ).toBeInTheDocument();
 
     expect(screen.getByRole('img', { name: props.title })).toHaveAttribute(
       'src',
-      props.img,
+      props.img
     );
 
     expect(screen.getByLabelText(/add to wishlist/i)).toBeInTheDocument();
@@ -46,11 +46,11 @@ describe('<GameCard />', () => {
     renderWithTheme(<GameCard {...props} promotionalPrice="R$ 15,00" />);
 
     expect(screen.getByText('R$ 235,00')).toHaveStyle({
-      textDecoration: 'line-through',
+      textDecoration: 'line-through'
     });
 
     expect(screen.getByText('R$ 15,00')).not.toHaveStyle({
-      textDecoration: 'line-through',
+      textDecoration: 'line-through'
     });
   });
 
@@ -76,7 +76,7 @@ describe('<GameCard />', () => {
         ribbon="My Ribbon"
         ribbonColor="secondary"
         ribbonSize="small"
-      />,
+      />
     );
     const ribbon = screen.getByText(/my ribbon/i);
 

@@ -50,7 +50,7 @@ const modalModifiers = {
   close: () => css`
     opacity: 0;
     pointer-events: none;
-  `,
+  `
 };
 
 export const Modal = styled.div<ModalProps>`

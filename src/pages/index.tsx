@@ -22,7 +22,7 @@ export function getServerSideProps() {
       upcommingHighligth: highlightMock,
       upcommingMoreGames: gamesMock,
       freeGames: gamesMock,
-      freeHighligth: highlightMock,
-    },
+      freeHighligth: highlightMock
+    }
   };
 }

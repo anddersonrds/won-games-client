@@ -33,7 +33,7 @@ describe('<TextField />', () => {
 
   it('Renders with Icon on the right side', () => {
     renderWithTheme(
-      <TextField icon={<Email data-testid="icon" />} iconPosition="right" />,
+      <TextField icon={<Email data-testid="icon" />} iconPosition="right" />
     );
 
     expect(screen.getByTestId('icon').parentElement).toHaveStyle({ order: 1 });
@@ -47,7 +47,7 @@ describe('<TextField />', () => {
         label="TextField"
         labelFor="TextField"
         id="TextField"
-      />,
+      />
     );
 
     const input = screen.getByRole('textbox');
@@ -70,7 +70,7 @@ describe('<TextField />', () => {
         labelFor="TextField"
         id="TextField"
         disabled
-      />,
+      />
     );
 
     const input = screen.getByRole('textbox');
@@ -92,7 +92,7 @@ describe('<TextField />', () => {
         label="TextField"
         labelFor="TextField"
         error="Error message"
-      />,
+      />
     );
 
     expect(screen.getByText('Error message')).toBeInTheDocument();
@@ -102,7 +102,7 @@ describe('<TextField />', () => {
 
   it('Is accessible by tab', () => {
     renderWithTheme(
-      <TextField label="TextField" labelFor="TextField" id="TextField" />,
+      <TextField label="TextField" labelFor="TextField" id="TextField" />
     );
 
     const input = screen.getByLabelText('TextField');
@@ -119,7 +119,7 @@ describe('<TextField />', () => {
         labelFor="TextField"
         id="TextField"
         disabled
-      />,
+      />
     );
 
     const input = screen.getByLabelText('TextField');

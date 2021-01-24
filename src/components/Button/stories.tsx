@@ -7,18 +7,18 @@ export default {
   component: Button,
   argTypes: {
     children: {
-      type: 'string',
+      type: 'string'
     },
     icon: {
-      type: '',
-    },
-  },
+      type: ''
+    }
+  }
 } as Meta;
 
 export const Default: Story = args => <Button {...args} />;
 
 Default.args = {
-  children: 'Buy now',
+  children: 'Buy now'
 };
 
 export const withIcon: Story = args => <Button {...args} />;
@@ -26,7 +26,7 @@ export const withIcon: Story = args => <Button {...args} />;
 withIcon.args = {
   size: 'small',
   children: 'Buy now',
-  icon: <AddShoppingCart />,
+  icon: <AddShoppingCart />
 };
 
 export const asLink: Story = args => <Button {...args} />;
@@ -35,5 +35,5 @@ asLink.args = {
   size: 'large',
   children: 'Buy now',
   as: 'a',
-  href: '/link',
+  href: '/link'
 };

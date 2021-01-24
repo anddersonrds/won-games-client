@@ -9,7 +9,7 @@ describe('<Form />', () => {
         <FormLink>
           My nice <a href="#">link</a>
         </FormLink>
-      </FormWrapper>,
+      </FormWrapper>
     );
 
     expect(container.parentElement).toMatchInlineSnapshot(`

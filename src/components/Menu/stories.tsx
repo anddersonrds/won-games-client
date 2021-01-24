@@ -3,7 +3,7 @@ import Menu, { MenuProps } from './index';
 
 export default {
   title: 'Menu',
-  component: Menu,
+  component: Menu
 } as Meta;
 
 export const Default: Story<MenuProps> = args => <Menu {...args} />;
@@ -11,6 +11,6 @@ export const Default: Story<MenuProps> = args => <Menu {...args} />;
 Default.parameters = {
   layout: 'fullscreen',
   backgrounds: {
-    default: 'won-dark',
-  },
+    default: 'won-dark'
+  }
 };

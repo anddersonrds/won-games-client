@@ -8,27 +8,27 @@ export default {
   component: GameDetails,
   parameters: {
     backgrounds: {
-      default: 'won-dark',
-    },
+      default: 'won-dark'
+    }
   },
   args: mockGame,
   argTypes: {
     releaseDate: {
-      control: 'date',
+      control: 'date'
     },
     platforms: {
       control: {
         type: 'inline-check',
-        options: ['windows', 'linux', 'mac'],
-      },
+        options: ['windows', 'linux', 'mac']
+      }
     },
     genres: {
       control: {
         type: 'inline-check',
-        options: ['Role-playing', 'Narrative'],
-      },
-    },
-  },
+        options: ['Role-playing', 'Narrative']
+      }
+    }
+  }
 } as Meta;
 
 export const Default: Story<GameDetailsProps> = args => (

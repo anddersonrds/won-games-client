@@ -10,7 +10,7 @@ describe('<FormSignIn />', () => {
     expect(screen.getByPlaceholderText(/email/i)).toBeInTheDocument();
     expect(screen.getByPlaceholderText(/password/i)).toBeInTheDocument();
     expect(
-      screen.getByRole('button', { name: /sign in now/i }),
+      screen.getByRole('button', { name: /sign in now/i })
     ).toBeInTheDocument();
 
     expect(container.parentElement).toMatchSnapshot();
@@ -20,7 +20,7 @@ describe('<FormSignIn />', () => {
     renderWithTheme(<FormSignIn />);
 
     expect(
-      screen.getByRole('link', { name: /forgot your password\?/i }),
+      screen.getByRole('link', { name: /forgot your password\?/i })
     ).toBeInTheDocument();
   });
 

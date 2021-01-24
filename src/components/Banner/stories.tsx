@@ -6,19 +6,19 @@ export default {
   component: Banner,
   argTypes: {
     ribbon: {
-      type: 'string',
-    },
+      type: 'string'
+    }
   },
   args: {
     img: 'https://source.unsplash.com/user/willianjusten/1042x580',
     title: 'Defy death',
     subtitle: '<p>Play the new <strong>CrashLands</strong> season',
     buttonLabel: 'Buy now',
-    buttonLink: '/games/defy-death',
+    buttonLink: '/games/defy-death'
   },
   parameters: {
-    layout: 'fullscreen',
-  },
+    layout: 'fullscreen'
+  }
 } as Meta;
 
 export const Default: Story<BannerProps> = args => (
@@ -36,5 +36,5 @@ export const WithRibbon: Story<BannerProps> = args => (
 WithRibbon.args = {
   ribbon: '20% OFF',
   ribbonSize: 'normal',
-  ribbonColor: 'primary',
+  ribbonColor: 'primary'
 };

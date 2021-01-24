@@ -22,7 +22,7 @@ const Banner = ({
   buttonLink,
   ribbon,
   ribbonColor = 'primary',
-  ribbonSize = 'normal',
+  ribbonSize = 'normal'
 }: BannerProps) => (
   <S.Wrapper>
     {!!ribbon && (

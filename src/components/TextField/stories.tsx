@@ -12,12 +12,12 @@ export default {
     icon: <Email />,
     id: 'Email',
     initialValue: '',
-    placeholder: 'john.cage@gmail.com',
+    placeholder: 'john.cage@gmail.com'
   },
   argTypes: {
     onInput: { action: 'changed' },
-    icon: { type: '' },
-  },
+    icon: { type: '' }
+  }
 } as Meta;
 
 export const Default: Story<TextFieldProps> = args => (
@@ -33,5 +33,5 @@ export const withError: Story<TextFieldProps> = args => (
 );
 
 withError.args = {
-  error: 'Ops...something is wrong',
+  error: 'Ops...something is wrong'
 };

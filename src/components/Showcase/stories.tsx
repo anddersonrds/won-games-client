@@ -12,14 +12,14 @@ export default {
       <div style={{ margin: '0 auto' }}>
         <Story />
       </div>
-    ),
+    )
   ],
   parameters: {
     layout: 'fullscreen',
     backgrounds: {
-      default: 'won-dark',
-    },
-  },
+      default: 'won-dark'
+    }
+  }
 } as Meta;
 
 export const Default: Story<ShowcaseProps> = args => <Showcase {...args} />;
@@ -27,7 +27,7 @@ export const Default: Story<ShowcaseProps> = args => <Showcase {...args} />;
 Default.args = {
   title: 'Most Popular',
   highlight: highlightMock,
-  games: gamesMock,
+  games: gamesMock
 };
 
 export const WithoutHighlight: Story<ShowcaseProps> = args => (
@@ -36,7 +36,7 @@ export const WithoutHighlight: Story<ShowcaseProps> = args => (
 
 WithoutHighlight.args = {
   title: 'Most Popular',
-  games: gamesMock,
+  games: gamesMock
 };
 
 export const WithoutGames: Story<ShowcaseProps> = args => (
@@ -45,5 +45,5 @@ export const WithoutGames: Story<ShowcaseProps> = args => (
 
 WithoutGames.args = {
   title: 'Most Popular',
-  highlight: highlightMock,
+  highlight: highlightMock
 };

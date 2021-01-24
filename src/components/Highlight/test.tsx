@@ -9,7 +9,7 @@ const props = {
   subtitle: 'Heading 2',
   backgroundImage: '/img/red-dead-img.jpg',
   buttonLabel: 'Buy now',
-  buttonLink: '/rdr2',
+  buttonLink: '/rdr2'
 };
 
 describe('<Highlight />', () => {
@@ -17,11 +17,11 @@ describe('<Highlight />', () => {
     const { container } = renderWithTheme(<Highlight {...props} />);
 
     expect(
-      screen.getByRole('heading', { name: /heading 1/i }),
+      screen.getByRole('heading', { name: /heading 1/i })
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole('heading', { name: /heading 2/i }),
+      screen.getByRole('heading', { name: /heading 2/i })
     ).toBeInTheDocument();
 
     expect(screen.getByRole('link', { name: /buy now/i })).toBeInTheDocument();
@@ -33,7 +33,7 @@ describe('<Highlight />', () => {
     const { container } = renderWithTheme(<Highlight {...props} />);
 
     expect(container.firstChild).toHaveStyle({
-      backgroundImage: `url(${props.backgroundImage})`,
+      backgroundImage: `url(${props.backgroundImage})`
     });
   });
 
@@ -42,7 +42,7 @@ describe('<Highlight />', () => {
 
     expect(screen.getByRole('img', { name: props.title })).toHaveAttribute(
       'src',
-      '/float-image.png',
+      '/float-image.png'
     );
   });
 
@@ -51,26 +51,26 @@ describe('<Highlight />', () => {
 
     expect(container.firstChild).toHaveStyleRule(
       'grid-template-areas',
-      "'floatimage content'",
+      "'floatimage content'"
     );
 
     expect(container.firstChild).toHaveStyleRule('text-align', 'right', {
-      modifier: `${S.Content}`,
+      modifier: `${S.Content}`
     });
   });
 
   it('should render align left by default', () => {
     const { container } = renderWithTheme(
-      <Highlight {...props} alignment="left" />,
+      <Highlight {...props} alignment="left" />
     );
 
     expect(container.firstChild).toHaveStyleRule(
       'grid-template-areas',
-      "'content floatimage'",
+      "'content floatimage'"
     );
 
     expect(container.firstChild).toHaveStyleRule('text-align', 'left', {
-      modifier: `${S.Content}`,
+      modifier: `${S.Content}`
     });
   });
 });

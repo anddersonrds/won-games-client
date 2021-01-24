@@ -2,7 +2,7 @@ import {
   createGlobalStyle,
   css,
   GlobalStyleComponent,
-  DefaultTheme,
+  DefaultTheme
 } from 'styled-components';
 
 type GlobalStyleProps = {

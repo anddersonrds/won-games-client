@@ -26,7 +26,7 @@ const wrapperModifiers = {
         display: none;
       }
     `};
-  `,
+  `
 };
 
 export const Wrapper = styled.div<LogoProps>`
