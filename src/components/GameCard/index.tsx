@@ -2,24 +2,24 @@ import {
   AddShoppingCart,
   Favorite,
   FavoriteBorder
-} from '@styled-icons/material-outlined';
+} from '@styled-icons/material-outlined'
 
-import Ribbon, { RibbonColors, RibbonSizes } from 'components/Ribbon';
-import Button from 'components/Button';
-import * as S from './styles';
+import Ribbon, { RibbonColors, RibbonSizes } from 'components/Ribbon'
+import Button from 'components/Button'
+import * as S from './styles'
 
 export type GameCardProps = {
-  title: string;
-  developer: string;
-  img: string;
-  price: string;
-  promotionalPrice?: string;
-  favorite?: boolean;
-  ribbon?: React.ReactNode;
-  ribbonColor?: RibbonColors;
-  ribbonSize?: RibbonSizes;
-  onFav?: () => void;
-};
+  title: string
+  developer: string
+  img: string
+  price: string
+  promotionalPrice?: string
+  favorite?: boolean
+  ribbon?: React.ReactNode
+  ribbonColor?: RibbonColors
+  ribbonSize?: RibbonSizes
+  onFav?: () => void
+}
 
 const GameCard = ({
   title,
@@ -61,6 +61,6 @@ const GameCard = ({
       </S.BuyBox>
     </S.Content>
   </S.Wrapper>
-);
+)
 
-export default GameCard;
+export default GameCard

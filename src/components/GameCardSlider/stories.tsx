@@ -1,9 +1,9 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Story, Meta } from '@storybook/react/types-6-0'
 
-import { GameCardProps } from 'components/GameCard';
-import GameCardSlider from './index';
+import { GameCardProps } from 'components/GameCard'
+import GameCardSlider from './index'
 
-import items from './mock';
+import items from './mock'
 
 export default {
   title: 'GameCardSlider',
@@ -15,10 +15,10 @@ export default {
       default: 'won-dark'
     }
   }
-} as Meta;
+} as Meta
 
 export const Default: Story<GameCardProps[]> = args => (
   <div style={{ maxWidth: '130rem', margin: '0 auto' }}>
     <GameCardSlider items={args} {...args} />
   </div>
-);
+)

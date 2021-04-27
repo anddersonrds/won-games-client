@@ -1,7 +1,7 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Story, Meta } from '@storybook/react/types-6-0'
 
-import GameDetails, { GameDetailsProps } from './index';
-import mockGame from './mock';
+import GameDetails, { GameDetailsProps } from './index'
+import mockGame from './mock'
 
 export default {
   title: 'Game/GameDetails',
@@ -29,10 +29,10 @@ export default {
       }
     }
   }
-} as Meta;
+} as Meta
 
 export const Default: Story<GameDetailsProps> = args => (
   <div style={{ maxWidth: '130rem', margin: '0 auto' }}>
     <GameDetails {...args} />
   </div>
-);
+)

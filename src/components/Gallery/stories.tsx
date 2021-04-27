@@ -1,7 +1,7 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Story, Meta } from '@storybook/react/types-6-0'
 
-import Gallery, { GalleryProps } from './index';
-import items from './mock';
+import Gallery, { GalleryProps } from './index'
+import items from './mock'
 
 export default {
   title: 'Gallery',
@@ -15,10 +15,10 @@ export default {
       default: 'won-dark'
     }
   }
-} as Meta;
+} as Meta
 
 export const Default: Story<GalleryProps> = args => (
   <div style={{ maxWidth: '130rem', margin: '0 auto' }}>
     <Gallery {...args} />
   </div>
-);
+)

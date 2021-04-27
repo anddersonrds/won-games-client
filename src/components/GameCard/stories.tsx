@@ -1,6 +1,6 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Story, Meta } from '@storybook/react/types-6-0'
 
-import GameCard, { GameCardProps } from './index';
+import GameCard, { GameCardProps } from './index'
 
 export default {
   title: 'GameCard',
@@ -16,22 +16,22 @@ export default {
     onFav: { action: 'clicked' },
     ribbon: { type: 'string' }
   }
-} as Meta;
+} as Meta
 
 export const Default: Story<GameCardProps> = args => (
   <div style={{ width: '30rem' }}>
     <GameCard {...args} />
   </div>
-);
+)
 
 export const WithRibbon: Story<GameCardProps> = args => (
   <div style={{ width: '30rem' }}>
     <GameCard {...args} />
   </div>
-);
+)
 
 WithRibbon.args = {
   ribbon: '20% OFF',
   ribbonSize: 'small',
   ribbonColor: 'primary'
-};
+}

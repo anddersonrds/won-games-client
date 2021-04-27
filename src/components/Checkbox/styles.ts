@@ -1,10 +1,10 @@
-import styled, { css } from 'styled-components';
-import { CheckboxProps } from './index';
+import styled, { css } from 'styled-components'
+import { CheckboxProps } from './index'
 
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-`;
+`
 
 export const Input = styled.input`
   ${({ theme }) => css`
@@ -48,7 +48,7 @@ export const Input = styled.input`
       }
     }
   `}
-`;
+`
 
 export const Label = styled.label<Pick<CheckboxProps, 'labelColor'>>`
   ${({ theme, labelColor }) => css`
@@ -57,4 +57,4 @@ export const Label = styled.label<Pick<CheckboxProps, 'labelColor'>>`
     color: ${theme.colors[labelColor!]};
     line-height: 1;
   `}
-`;
+`

@@ -3,11 +3,11 @@ import {
   css,
   GlobalStyleComponent,
   DefaultTheme
-} from 'styled-components';
+} from 'styled-components'
 
 type GlobalStyleProps = {
-  removeBg?: boolean;
-};
+  removeBg?: boolean
+}
 
 const GlobalStyles: GlobalStyleComponent<
   GlobalStyleProps,
@@ -68,6 +68,6 @@ const GlobalStyles: GlobalStyleComponent<
       `}
     }
   `};
-`;
+`
 
-export default GlobalStyles;
+export default GlobalStyles

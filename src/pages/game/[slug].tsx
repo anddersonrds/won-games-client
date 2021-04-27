@@ -1,20 +1,20 @@
-import Game, { GameTemplateProps } from 'templates/Game';
+import Game, { GameTemplateProps } from 'templates/Game'
 
-import galleryMock from 'components/Gallery/mock';
-import gamesMock from 'components/GameCardSlider/mock';
-import highlightMock from 'components/Highlight/mock';
+import galleryMock from 'components/Gallery/mock'
+import gamesMock from 'components/GameCardSlider/mock'
+import highlightMock from 'components/Highlight/mock'
 
 const Index = (props: GameTemplateProps) => {
-  return <Game {...props} />;
-};
+  return <Game {...props} />
+}
 
-export default Index;
+export default Index
 
 export async function getStaticPaths() {
   return {
     paths: [{ params: { slug: 'cyberpunk-2077' } }],
     fallback: false
-  };
+  }
 }
 
 export async function getStaticProps() {
@@ -33,7 +33,7 @@ export async function getStaticProps() {
               <p class="description__copyrights">
               CD PROJEKT®, Cyberpunk®, Cyberpunk 2077® are registered trademarks of CD PROJEKT S.A. © 2019
   CD PROJEKT S.A. All rights reserved. All other copyrights and trademarks are the property of their
-  respective owners.</p>`;
+  respective owners.</p>`
 
   return {
     props: {
@@ -59,5 +59,5 @@ export async function getStaticProps() {
       upcomingHighlight: highlightMock,
       recommendedGames: gamesMock
     }
-  };
+  }
 }

@@ -41,4 +41,4 @@ export default [
     price: 'R$ 235,00',
     promotionalPrice: 'R$ 215,00'
   }
-];
+]

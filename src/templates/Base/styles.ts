@@ -1,16 +1,16 @@
-import styled, { css } from 'styled-components';
-import media from 'styled-media-query';
+import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-`;
+`
 
 export const Content = styled.div`
   flex: 1 0 auto;
-`;
+`
 
 export const SectionFooter = styled.section`
   ${({ theme }) => css`
@@ -25,4 +25,4 @@ export const SectionFooter = styled.section`
       clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
     `}
   `}
-`;
+`

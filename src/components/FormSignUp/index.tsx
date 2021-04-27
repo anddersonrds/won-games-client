@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import { AccountCircle, Email, Lock } from '@styled-icons/material-outlined';
-import { FormLink, FormWrapper } from 'components/Form';
+import Link from 'next/link'
+import { AccountCircle, Email, Lock } from '@styled-icons/material-outlined'
+import { FormLink, FormWrapper } from 'components/Form'
 
-import Button from 'components/Button';
-import TextField from 'components/TextField';
+import Button from 'components/Button'
+import TextField from 'components/TextField'
 
 const FormSignUp = () => (
   <FormWrapper>
@@ -45,6 +45,6 @@ const FormSignUp = () => (
       </FormLink>
     </form>
   </FormWrapper>
-);
+)
 
-export default FormSignUp;
+export default FormSignUp

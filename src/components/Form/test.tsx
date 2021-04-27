@@ -1,6 +1,6 @@
-import { renderWithTheme } from 'utils/tests/helpers';
+import { renderWithTheme } from 'utils/tests/helpers'
 
-import { FormLink, FormWrapper } from './index';
+import { FormLink, FormWrapper } from './index'
 
 describe('<Form />', () => {
   it('should render the heading', () => {
@@ -10,7 +10,7 @@ describe('<Form />', () => {
           My nice <a href="#">link</a>
         </FormLink>
       </FormWrapper>
-    );
+    )
 
     expect(container.parentElement).toMatchInlineSnapshot(`
       .c0 .sc-AxgMl {
@@ -59,6 +59,6 @@ describe('<Form />', () => {
           </div>
         </div>
       </body>
-    `);
-  });
-});
+    `)
+  })
+})
