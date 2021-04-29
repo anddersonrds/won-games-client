@@ -1,13 +1,14 @@
 /* eslint-disable jsx-a11y/aria-role */
 import Base from 'templates/Base'
 
+import Showcase from 'components/Showcase'
+import TextContent from 'components/TextContent'
 import GameInfo, { GameInfoProps } from 'components/GameInfo'
 import Gallery, { GalleryImageProps } from 'components/Gallery'
-import TextContent from 'components/TextContent'
 import GameDetails, { GameDetailsProps } from 'components/GameDetails'
+import { Divider } from 'components/Divider'
 import { GameCardProps } from 'components/GameCard'
 import { HighlightProps } from 'components/Highlight'
-import Showcase from 'components/Showcase'
 
 import * as S from './styles'
 
@@ -50,6 +51,7 @@ const Game = ({
 
       <S.SectionGameDetails>
         <GameDetails {...details} />
+        <Divider />
       </S.SectionGameDetails>
 
       <Showcase
