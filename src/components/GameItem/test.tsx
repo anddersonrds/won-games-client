@@ -34,4 +34,23 @@ describe('<GameItem />', () => {
       screen.getByRole('link', { name: `Get ${props.title} here` })
     ).toHaveAttribute('href', downloadLink)
   })
+
+  it('should render the payment info', () => {
+    const paymentInfo = {
+      number: '**** **** **** 2502',
+      flag: 'mastercard',
+      img: '/img/cards/mastercard.png',
+      purchaseDate: 'Purchase made on 07/20/2021 at 20:32'
+    }
+
+    renderWithTheme(<GameItem {...props} paymentInfo={paymentInfo} />)
+
+    expect(screen.getByRole('img', { name: paymentInfo.flag })).toHaveAttribute(
+      'src',
+      paymentInfo.img
+    )
+
+    expect(screen.getByText(paymentInfo.number)).toBeInTheDocument()
+    expect(screen.getByText(paymentInfo.purchaseDate)).toBeInTheDocument()
+  })
 })

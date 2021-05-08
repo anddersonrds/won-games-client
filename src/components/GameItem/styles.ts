@@ -58,7 +58,7 @@ export const Title = styled.h3`
   `}
 `
 
-export const Price = styled.p`
+export const Price = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.white};
     font-size: ${theme.font.sizes.small};
@@ -73,5 +73,39 @@ export const DownloadLink = styled.a`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
     margin-left: ${theme.spacings.xxsmall};
+  `}
+`
+
+export const PaymentContent = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    min-width: 28rem;
+    font-size: ${theme.font.sizes.small};
+    margin-top: ${theme.spacings.xsmall};
+    color: ${theme.colors.gray};
+
+    ${media.greaterThan('medium')`
+      flex: 1;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 0;
+    `}
+  `}
+`
+
+export const CardInfo = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-left: ${theme.spacings.xxsmall};
+    }
+
+    ${media.lessThan('medium')`
+      margin-top: ${theme.spacings.xsmall};
+    `}
   `}
 `
