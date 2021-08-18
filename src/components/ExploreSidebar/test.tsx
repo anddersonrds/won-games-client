@@ -1,8 +1,11 @@
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { css } from 'styled-components'
 import { renderWithTheme } from 'utils/tests/helpers'
 
 import ExploreSidebar from '.'
+import { Overlay } from './styles'
+
 import itemsMock from './mock'
 
 describe('<ExploreSidebar />', () => {
@@ -38,7 +41,7 @@ describe('<ExploreSidebar />', () => {
   it('should check initial values that are passed', () => {
     renderWithTheme(
       <ExploreSidebar
-        items={items}
+        items={itemsMock}
         onFilter={jest.fn}
         initialValues={{ windows: true, sort_by: 'low-to-high' }}
       />
@@ -54,7 +57,7 @@ describe('<ExploreSidebar />', () => {
 
     renderWithTheme(
       <ExploreSidebar
-        items={items}
+        items={itemsMock}
         initialValues={{ windows: true, sort_by: 'low-to-high' }}
         onFilter={onFilter}
       />
@@ -68,7 +71,7 @@ describe('<ExploreSidebar />', () => {
   it('should filter with checked values', () => {
     const onFilter = jest.fn()
 
-    renderWithTheme(<ExploreSidebar items={items} onFilter={onFilter} />)
+    renderWithTheme(<ExploreSidebar items={itemsMock} onFilter={onFilter} />)
 
     userEvent.click(screen.getByLabelText(/windows/i))
     userEvent.click(screen.getByLabelText(/linux/i))
@@ -86,7 +89,7 @@ describe('<ExploreSidebar />', () => {
   it('should altern between radio options', () => {
     const onFilter = jest.fn()
 
-    renderWithTheme(<ExploreSidebar items={items} onFilter={onFilter} />)
+    renderWithTheme(<ExploreSidebar items={itemsMock} onFilter={onFilter} />)
 
     userEvent.click(screen.getByLabelText(/low to high/i))
     userEvent.click(screen.getByLabelText(/high to low/i))
@@ -98,7 +101,7 @@ describe('<ExploreSidebar />', () => {
 
   it('should open/close sidebar when filtering on mobile ', () => {
     const { container } = renderWithTheme(
-      <ExploreSidebar items={items} onFilter={jest.fn} />
+      <ExploreSidebar items={itemsMock} onFilter={jest.fn} />
     )
 
     const variant = {
